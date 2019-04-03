@@ -1,0 +1,4 @@
+auth-project/vendor/
+.project
+.buildpath
+.settings/

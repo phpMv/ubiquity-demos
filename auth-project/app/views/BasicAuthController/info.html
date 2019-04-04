@@ -1,0 +1,32 @@
+{% extends "@framework/auth/info.html" %}
+{% block _before %}
+<div class="ui tertiary inverted brown segment">
+	<div class="ui right aligned grid">
+		<div class="left floated right aligned ten wide column">
+		</div>
+		<div class="left floated right aligned six wide column">
+{% endblock %}
+{% block _userInfo %}
+	<div class="ui icon label">
+	<i class="user icon"></i>
+	{{ connected | raw }}
+	</div>
+	&nbsp;
+{% endblock %}
+{% block _logoutButton %}
+     {{ parent() }}
+{% endblock %}
+{% block _logoutCaption %}
+     {{ parent() }}
+{% endblock %}
+{% block _loginButton %}
+     {{ parent() }}
+{% endblock %}
+{% block _loginCaption %}
+     {{ parent() }}
+{% endblock %}
+{% block _after %}
+		</div>
+	</div>
+</div>
+{% endblock %}

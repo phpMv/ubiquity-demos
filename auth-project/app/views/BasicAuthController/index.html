@@ -1,6 +1,7 @@
 {% extends "@framework/auth/index.html" %}
 {% block _before %}
 	{{ parent() }}
+	<div class="ui green segment">
 {% endblock %}
 {% block _form %}
 	{{ parent() }}
@@ -15,7 +16,7 @@
 	{{ parent() }}
 {% endblock %}
 {% block _login %}
-	{{ parent() }}
+	<input id="{{loginInputName}}" name="{{loginInputName}}" type="text" placeholder="{{loginLabel}}" value="root@dev.local">
 {% endblock %}
 {% block _fieldPassword %}
 	{{ parent() }}
@@ -34,4 +35,5 @@
 {% endblock %}
 {% block _after %}
 	{{ parent() }}
+	</div>
 {% endblock %}

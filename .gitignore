@@ -2,3 +2,4 @@ auth-project/vendor/
 .project
 .buildpath
 .settings/
+auth-project/app/cache/

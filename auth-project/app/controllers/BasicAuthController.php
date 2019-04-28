@@ -76,5 +76,9 @@ class BasicAuthController extends \Ubiquity\controllers\auth\AuthController{
 	protected function attemptsNumber() {
 		return 3;
 	}
+	
+	public function _getBodySelector(){
+		return "#main-content";
+	}
 
 }

@@ -1,5 +1,5 @@
 # ubiquity-demos
-Demos applications for main features in Ubiquity framework
+Demos applications for main features in [Ubiquity framework](https://ubiquity.kobject.net)
 
 ## Features/Demos
 | Project  | Framework part | Description |

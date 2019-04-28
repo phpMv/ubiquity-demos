@@ -1,6 +1,7 @@
 # Authentification
 
-## Branch master
-Adds authetification to Admin controller (webtools access)
+## Branch 1-auth-admin
+Adds authentification to Admin controller (webtools access)
 
 ### Preview
+

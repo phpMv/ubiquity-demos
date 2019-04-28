@@ -18,4 +18,8 @@ Please delete options that are not relevant.
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
 - [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
+
+For a new demo:
+- [ ] My demo is documented in its own README file
+- [ ] My demo has been added to the main README file
+- [ ] I have updated CHANGELOG file

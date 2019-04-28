@@ -5,4 +5,4 @@ Adds authentification to Admin controller (webtools access)
 
 ### Preview
 
-![img](https://github.com/phpMv/ubiquity-demos/blob/master/doc/images/admin-index-auth.png?raw=true)
+![img](https://github.com/phpMv/ubiquity-demos/blob/master/auth-project/doc/images/admin-index-auth.png?raw=true)

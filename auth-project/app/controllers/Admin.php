@@ -9,5 +9,4 @@ class Admin extends UbiquityMyAdminBaseController{
 	protected function getAuthController(): AuthController {
 		return new BasicAuthController();
 	}
-
 }

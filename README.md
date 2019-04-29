@@ -1,4 +1,5 @@
-# ubiquity-demos
+![img](https://github.com/phpmv/ubiquity-demos/blob/master/.github/images/demo.png?raw=true)
+
 Demos applications for main features in [Ubiquity framework](https://ubiquity.kobject.net)
 
 ## Features/Demos

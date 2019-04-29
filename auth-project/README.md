@@ -69,3 +69,7 @@ See in [`BasicAuthController`](app/controllers/BasicAuthController.php)
 ### Customizing the display
 See in [template files](app/views/BasicAuthController)
 
+### Related documentation
+- Guide: [auth controllers](https://micro-framework.readthedocs.io/en/latest/scaffolding/auth.html)
+- API :
+  - [AuthController](https://api.kobject.net/ubiquity/class_ubiquity_1_1controllers_1_1auth_1_1_auth_controller.html)

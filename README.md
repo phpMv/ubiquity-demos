@@ -1,4 +1,5 @@
 ![img](https://github.com/phpmv/ubiquity-demos/blob/master/.github/images/demo.png?raw=true)
+<hr>
 
 Demos applications for main features in [Ubiquity framework](https://ubiquity.kobject.net)
 

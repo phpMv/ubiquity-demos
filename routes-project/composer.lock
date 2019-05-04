@@ -1,0 +1,558 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "2653355ce09e13e399c383a48a492c5a",
+    "packages": [
+        {
+            "name": "frameworks/jquery",
+            "version": "2.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frameworks/jquery.git",
+                "reference": "ef9c4fe9fcb23914bba6ec6d32c556e4a38a0fd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frameworks/jquery/zipball/ef9c4fe9fcb23914bba6ec6d32c556e4a38a0fd9",
+                "reference": "ef9c4fe9fcb23914bba6ec6d32c556e4a38a0fd9",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2015-10-09T00:55:51+00:00"
+        },
+        {
+            "name": "mindplay/annotations",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-annotations/php-annotations.git",
+                "reference": "77ef66f79fb65a7b7e7e005be0bd6b643de43867"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-annotations/php-annotations/zipball/77ef66f79fb65a7b7e7e005be0bd6b643de43867",
+                "reference": "77ef66f79fb65a7b7e7e005be0bd6b643de43867",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/php-code-coverage": "~1.2.1",
+                "phpunit/php-file-iterator": ">=1.3.0@stable"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mindplay\\annotations\\": "src\\annotations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Rasmus Schultz",
+                    "email": "rasmus@mindplay.dk"
+                }
+            ],
+            "description": "Industrial-strength annotations for PHP",
+            "homepage": "http://blog.mindplay.dk/",
+            "keywords": [
+                "annotations",
+                "framework"
+            ],
+            "time": "2019-01-15T17:03:08+00:00"
+        },
+        {
+            "name": "phpmv/php-mv-ui",
+            "version": "2.2.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpMv/phpMv-UI.git",
+                "reference": "1fb59e44082756e6750e647c76b4ec13c04ddc16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpMv/phpMv-UI/zipball/1fb59e44082756e6750e647c76b4ec13c04ddc16",
+                "reference": "1fb59e44082756e6750e647c76b4ec13c04ddc16",
+                "shasum": ""
+            },
+            "require": {
+                "frameworks/jquery": "~2.1",
+                "php": ">5.3.9"
+            },
+            "suggest": {
+                "components/jqueryui": "~1.11",
+                "semantic/ui": "~2.2.1",
+                "twitter/bootstrap": "~3.3"
+            },
+            "type": "phpmv-ui",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ajax\\": "Ajax/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-Christophe HERON",
+                    "email": "myaddressmail@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A JQuery and UI library for php and php MVC frameworks",
+            "keywords": [
+                "codeigniter",
+                "framework",
+                "jQuery UI",
+                "jquery",
+                "laravel",
+                "phalcon",
+                "php",
+                "semantic ui",
+                "symfony",
+                "twitter bootstrap",
+                "yii"
+            ],
+            "time": "2019-04-18T11:49:15+00:00"
+        },
+        {
+            "name": "phpmv/ubiquity",
+            "version": "v2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpMv/ubiquity.git",
+                "reference": "2a9917d84a83474ae516f083a2410769e18eb9e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/2a9917d84a83474ae516f083a2410769e18eb9e9",
+                "reference": "2a9917d84a83474ae516f083a2410769e18eb9e9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">7.0"
+            },
+            "require-dev": {
+                "phpmv/ubiquity-codeception": "^1.0",
+                "phpmv/ubiquity-devtools": "dev-master"
+            },
+            "type": "framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ubiquity\\": "src/Ubiquity/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-Christophe HERON",
+                    "email": "myaddressmail@gmail.com",
+                    "role": "Lead developer"
+                }
+            ],
+            "description": "Ubiquity-framework",
+            "keywords": [
+                "framework",
+                "mvc",
+                "orm",
+                "php"
+            ],
+            "time": "2019-04-27T00:06:38+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "82ebae02209c21113908c229e9883c419720738a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
+                "reference": "82ebae02209c21113908c229e9883c419720738a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v2.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "82a1c055c8ed4c4705023bfd0405f3c74db6e3ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/82a1c055c8ed4c4705023bfd0405f3c74db6e3ae",
+                "reference": "82a1c055c8ed4c4705023bfd0405f3c74db6e3ae",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "symfony/polyfill-ctype": "^1.8",
+                "symfony/polyfill-mbstring": "^1.3"
+            },
+            "require-dev": {
+                "psr/container": "^1.0",
+                "symfony/debug": "^2.7",
+                "symfony/phpunit-bridge": "^3.4.19|^4.1.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "https://twig.symfony.com/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2019-04-28T06:57:38+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "czproject/git-php",
+            "version": "v3.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/czproject/git-php.git",
+                "reference": "a7b911b81a2fe626f748a4ac8955353c5777bc6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/czproject/git-php/zipball/a7b911b81a2fe626f748a4ac8955353c5777bc6c",
+                "reference": "a7b911b81a2fe626f748a4ac8955353c5777bc6c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "nette/tester": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Pecha",
+                    "email": "janpecha@email.cz"
+                }
+            ],
+            "description": "Library for work with Git repository in PHP.",
+            "keywords": [
+                "git"
+            ],
+            "time": "2019-02-09T13:11:36+00:00"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2018-11-05T09:00:11+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2018-11-20T15:27:04+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.1"
+    },
+    "platform-dev": []
+}

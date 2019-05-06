@@ -9,7 +9,7 @@ namespace controllers;
 class RoutesIllustration extends ControllerBase{
 
 	public function index(){
-		$this->jquery->getHref("a","#response");
+		$this->jquery->getHref("a","#response",["hasLoader"=>"internal"]);
 		$this->jquery->renderView("RoutesIllustration/index.html");
 	}
 }

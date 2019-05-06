@@ -1,8 +1,16 @@
 <!--View associated to index action of RoutesIllustration controller -->
 <div class="ui container">
-	<a class="ui button" href="foo">Dynamic callable Foo route</a>
-	<a class="ui button" href="bar">Dynamic bar route</a>
-	<a class="ui button" href="RoutesActions">Default mecanism</a>
-	<div id="response"></div>
+	<h1 class="ui header"><i class="ui car icon"></i>Routes</h1>
+
+	<div class="ui segment">
+		<h2 class="ui header">Routes without Router</h2>
+		<a class="ui button" href="foo">Dynamic callable Foo route</a>
+		<a class="ui button" href="bar">Dynamic bar route</a>
+		<a class="ui button" href="RoutesActions">Default mecanism</a>
+		<a class="ui button" href="RoutesActions/withParams/required parameter">Default mecanism with parameters</a>
+	</div>
+	<div class="ui inverted segment">
+		<div id="response"></div>
+	</div>
 </div>
 {{ script_foot | raw }}

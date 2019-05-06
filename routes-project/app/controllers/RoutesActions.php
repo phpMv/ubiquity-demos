@@ -6,7 +6,12 @@ namespace controllers;
 class RoutesActions extends ControllerBase{
 
 	public function index(){
-		echo "Usage of mecanism : /controller/action";
+		echo 'Usage of mecanism : /controller/action';
+	}
+	
+	public function withParams($required,$optional="optional"){
+		echo 'Usage of mecanism : /controller/action/params:<br>';
+		echo 'params: '.$required.','.$optional;
 	}
 	
 	public function routeForbar(){

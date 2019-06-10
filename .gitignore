@@ -5,3 +5,5 @@ auth-project/vendor/
 auth-project/app/cache/
 routes-project/vendor/
 routes-project/app/cache/
+translations-project/vendor/
+translations-project/app/cache/

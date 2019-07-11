@@ -1,8 +1,6 @@
 <?php
 namespace controllers;
 
-use Ubiquity\utils\http\UResponse;
-
 /**
  *
  * @property \Ajax\php\ubiquity\JsUtils $jquery

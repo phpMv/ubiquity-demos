@@ -1,0 +1,16 @@
+<div class="ui top attached header">
+	<i class="users circular icon"></i>
+	<div class="content">Users</div>
+</div>
+<div class="ui attached segment">
+	<ul id='users-content'>
+	{% for user in users %}
+		<li data-ajax="{{user.id}}">{{user.firstname }} {{user.lastname}}</li>
+	{% endfor %}
+	</ul>
+	<div id='user-detail'></div>
+</div>
+<div class="ui bottom attached inverted segment">
+<div id="close-bt" class="ui inverted button">Close</div>
+</div>
+{{ script_foot | raw }}

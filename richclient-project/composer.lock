@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e204f192a9f1d97dd572a16927c3eeda",
+    "content-hash": "dd257a0b6751f3a55ea9104e339d96d0",
     "packages": [
         {
             "name": "frameworks/jquery",
@@ -81,16 +81,16 @@
         },
         {
             "name": "phpmv/php-mv-ui",
-            "version": "2.2.12",
+            "version": "2.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/phpMv-UI.git",
-                "reference": "0dcdadc32697515cbf1e9ebf1db995794905e8ce"
+                "reference": "fa067aadb95ac4fadd89dd5bc44aa0ac1eba2c70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/phpMv-UI/zipball/0dcdadc32697515cbf1e9ebf1db995794905e8ce",
-                "reference": "0dcdadc32697515cbf1e9ebf1db995794905e8ce",
+                "url": "https://api.github.com/repos/phpMv/phpMv-UI/zipball/fa067aadb95ac4fadd89dd5bc44aa0ac1eba2c70",
+                "reference": "fa067aadb95ac4fadd89dd5bc44aa0ac1eba2c70",
                 "shasum": ""
             },
             "require": {
@@ -138,7 +138,7 @@
                 "twitter bootstrap",
                 "yii"
             ],
-            "time": "2019-06-09T18:15:54+00:00"
+            "time": "2019-07-07T03:08:21+00:00"
         },
         {
             "name": "phpmv/ubiquity",
@@ -146,25 +146,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpMv/ubiquity.git",
-                "reference": "20ee7277fca20cc3e69ceb229782fbc3624a6163"
+                "reference": "9957c5e601653027899ca46a5c4b00c4f8cb96c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/20ee7277fca20cc3e69ceb229782fbc3624a6163",
-                "reference": "20ee7277fca20cc3e69ceb229782fbc3624a6163",
+                "url": "https://api.github.com/repos/phpMv/ubiquity/zipball/9957c5e601653027899ca46a5c4b00c4f8cb96c2",
+                "reference": "9957c5e601653027899ca46a5c4b00c4f8cb96c2",
                 "shasum": ""
             },
             "require": {
                 "php": ">7.0"
             },
             "require-dev": {
+                "phpmv/php-mv-ui": "^2.2",
                 "phpmv/ubiquity-codeception": "^1.0",
-                "phpmv/ubiquity-devtools": "dev-master"
+                "phpmv/ubiquity-devtools": "^1.2"
             },
             "type": "framework",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2.x-dev"
+                    "dev-master": "2.3.x-dev"
                 }
             },
             "autoload": {
@@ -190,7 +191,60 @@
                 "orm",
                 "php"
             ],
-            "time": "2019-06-10T00:53:29+00:00"
+            "time": "2019-07-06T23:02:44+00:00"
+        },
+        {
+            "name": "phpmv/ubiquity-webtools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpMv/ubiquity-webtools.git",
+                "reference": "1637c23f74188caa7054f6d4b51fd87dd8479776"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpMv/ubiquity-webtools/zipball/1637c23f74188caa7054f6d4b51fd87dd8479776",
+                "reference": "1637c23f74188caa7054f6d4b51fd87dd8479776",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">7.0"
+            },
+            "require-dev": {
+                "phpmv/php-mv-ui": "^2.2.14"
+            },
+            "type": "extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ubiquity\\": "src/Ubiquity/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-Christophe HERON",
+                    "email": "myaddressmail@gmail.com",
+                    "role": "Lead developer"
+                }
+            ],
+            "description": "Webtools for Ubiquity framework",
+            "keywords": [
+                "framework",
+                "mvc",
+                "orm",
+                "php",
+                "php-framework",
+                "tools"
+            ],
+            "time": "2019-07-03T16:32:14+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -311,16 +365,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.11.2",
+            "version": "v2.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "84a463403da1c81afbcedda8f0e788c78bd25a79"
+                "reference": "699ed2342557c88789a15402de5eb834dedd6792"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/84a463403da1c81afbcedda8f0e788c78bd25a79",
-                "reference": "84a463403da1c81afbcedda8f0e788c78bd25a79",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/699ed2342557c88789a15402de5eb834dedd6792",
+                "reference": "699ed2342557c88789a15402de5eb834dedd6792",
                 "shasum": ""
             },
             "require": {
@@ -374,7 +428,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-06-05T11:17:07+00:00"
+            "time": "2019-06-18T15:37:11+00:00"
         }
     ],
     "packages-dev": [
@@ -549,7 +603,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "phpmv/ubiquity": 20
+        "phpmv/ubiquity": 20,
+        "phpmv/ubiquity-webtools": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

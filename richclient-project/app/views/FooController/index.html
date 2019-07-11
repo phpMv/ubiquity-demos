@@ -1,0 +1,11 @@
+<div class="ui buttons">
+	<a class="ui button" href="{{path('action.a')}}">Action a</a>
+	<a class="ui button" href="{{path('action.b')}}">Action b</a>
+	<a class="ui button" href="{{path('action.c')}}" data-target=".result p">Action c</a>
+</div>
+<div class='ui segment result'>
+Action choisie :
+<span class="ui label">No One</span>
+<p></p>
+</div>
+{{ script_foot | raw }}

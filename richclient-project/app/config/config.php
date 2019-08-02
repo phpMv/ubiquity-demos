@@ -2,15 +2,15 @@
 return array(
 	"siteUrl"=>"http://127.0.0.1:8090/",
 	"database"=>array(
-			"type"=>"mysql",
-			"dbName"=>"uguide",
-			"serverName"=>"127.0.0.1",
-			"port"=>3306,
-			"user"=>"root",
-			"password"=>"",
-			"options"=>array(),
-			"cache"=>false
-			),
+		"type"=>"mysql",
+		"dbName"=>"uguide",
+		"serverName"=>"127.0.0.1",
+		"port"=>3306,
+		"user"=>"root",
+		"password"=>"",
+		"options"=>array(),
+		"cache"=>false
+	),
 	"sessionName"=>"s5d1a47a6e2037",
 	"namespaces"=>array(),
 	"templateEngine"=>"Ubiquity\\views\\engine\\Twig",

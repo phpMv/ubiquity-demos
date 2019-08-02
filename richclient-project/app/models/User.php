@@ -20,6 +20,12 @@ class User{
 	**/
 	private $lastname;
 
+	/**
+	 * @column("name"=>"password","nullable"=>false,"dbType"=>"varchar(30)")
+	 * @validator("length","constraints"=>array("max"=>30,"notNull"=>true))
+	**/
+	private $password;
+
 	 public function getId(){
 		return $this->id;
 	}
@@ -42,6 +48,14 @@ class User{
 
 	 public function setLastname($lastname){
 		$this->lastname=$lastname;
+	}
+
+	 public function getPassword(){
+		return $this->password;
+	}
+
+	 public function setPassword($password){
+		$this->password=$password;
 	}
 
 	 public function __toString(){

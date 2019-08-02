@@ -5,7 +5,8 @@ return array(
 			"routes",
 			"routes",
 			"routes",
-			"routes"
+			"routes",
+			"cache"
 			),
 	"display-cache-types"=>array(
 			"controllers",
@@ -46,5 +47,6 @@ return array(
 			"cache",
 			"config",
 			"maintenance"
-			)
+			),
+	"activeDb"=>"default"
 	);

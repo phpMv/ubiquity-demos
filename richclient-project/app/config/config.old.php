@@ -2,14 +2,36 @@
 return array(
 	"siteUrl"=>"http://127.0.0.1:8090/",
 	"database"=>array(
-			"type"=>"mysql",
-			"dbName"=>"uguide",
-			"serverName"=>"127.0.0.1",
-			"port"=>3306,
-			"user"=>"root",
-			"password"=>"",
-			"options"=>array(),
-			"cache"=>false
+			"default"=>array(
+					"type"=>"mysql",
+					"dbName"=>"uguide",
+					"serverName"=>"127.0.0.1",
+					"port"=>3306,
+					"user"=>"root",
+					"password"=>"",
+					"options"=>array(),
+					"cache"=>false
+					),
+			"extra"=>array(
+					"type"=>"mysql",
+					"dbName"=>"messagerie",
+					"serverName"=>"127.0.0.1",
+					"port"=>3306,
+					"options"=>array(),
+					"user"=>"root",
+					"password"=>"",
+					"cache"=>false
+					),
+			"projects"=>array(
+					"type"=>"mysql",
+					"dbName"=>"projects",
+					"serverName"=>"127.0.0.1",
+					"port"=>3306,
+					"options"=>array(),
+					"user"=>"root",
+					"password"=>"",
+					"cache"=>false
+					)
 			),
 	"sessionName"=>"s5d1a47a6e2037",
 	"namespaces"=>array(),
@@ -21,11 +43,9 @@ return array(
 	"debug"=>true,
 	"logger"=>function (){return new \Ubiquity\log\libraries\UMonolog("richclient-project",\Monolog\Logger::INFO);},
 	"di"=>array(
-			"@exec"=>array(
-					"jquery"=>function ($controller){
+			"@exec"=>array("jquery"=>function ($controller){
 						return \Ubiquity\core\Framework::diSemantic($controller);
-					}
-					)
+					})
 			),
 	"cache"=>array(
 			"directory"=>"cache/",

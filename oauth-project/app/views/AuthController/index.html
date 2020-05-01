@@ -1,0 +1,50 @@
+{% extends "@framework/auth/index.html" %}
+{% block _before %}
+	{{ parent() }}
+	<a href="{{path('signup')}}" class='ui black button' id='sign-up'><i class="ui signup icon"></i> Sign-up</a>
+	<div class="ui horizontal divider">
+	Or
+	</div>
+	<h4 class="ui top attached header">Sign up or sign in with</h4>
+	<div class="ui attached segment">
+		{{q['bts']|raw}}
+	</div>
+	<div class="ui horizontal divider">
+	Or
+	</div>
+	<h4 class="ui top attached header">Connect</h4>
+	<div class="ui attached segment">
+{% endblock %}
+{% block _form %}
+	{{ parent() }}
+{% endblock %}
+{% block _header %}
+{% endblock %}
+{% block _fields %}
+	{{ parent() }}
+{% endblock %}
+{% block _fieldLogin %}
+	{{ parent() }}
+{% endblock %}
+{% block _login %}
+	{{ parent() }}
+{% endblock %}
+{% block _fieldPassword %}
+	{{ parent() }}
+{% endblock %}
+{% block _password %}
+	{{ parent() }}
+{% endblock %}
+{% block _extraFields %}
+	{{ parent() }}
+{% endblock %}
+{% block _fieldRemember %}
+	{{ parent() }}
+{% endblock %}
+{% block _buttons %}
+	{{ parent() }}
+{% endblock %}
+{% block _after %}
+	{{ parent() }}
+	</div>
+{% endblock %}

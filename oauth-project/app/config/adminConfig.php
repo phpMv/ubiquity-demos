@@ -5,8 +5,7 @@ return array(
 	"display-cache-types"=>array(
 			"controllers",
 			"models",
-			"views",
-			"queries"
+			"annotations"
 			),
 	"maintenance"=>array(
 			"on"=>false,
@@ -33,20 +32,22 @@ return array(
 							)
 					)
 			),
-	"email"=>"root@dev.local",
-	"password"=>"admin",
 	"part1"=>array(
 			"models",
 			"routes",
 			"controllers",
 			"cache",
-			"rest",
 			"config"
 			),
 	"part2"=>array(
-			"seo",
-			"translate",
 			"composer",
-			"logs"
+			"oauth",
+			"logs",
+			"git"
+			),
+	"oauth-providers"=>array(
+			"Google"=>true,
+			"GitHub"=>false,
+			"Discord"=>true
 			)
 	);

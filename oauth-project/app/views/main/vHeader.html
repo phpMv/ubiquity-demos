@@ -4,7 +4,8 @@
 {% block header %}
 	<base href="{{config["siteUrl"]}}">
 	<meta charset="UTF-8">
-	<title>auth-project</title>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<title>oauth-project</title>
 {% endblock %}
 {% block css %}
 	{{ css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.3/dist/semantic.min.css') }}
@@ -13,5 +14,5 @@
 </head>
 <body>
 {% block head %}
-<div class="ui container">
+<div class='ui segment container green'>
 {% endblock %}

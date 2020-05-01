@@ -11,3 +11,5 @@ richclient-project/vendor/
 richclient-project/app/cache/
 di-project/vendor/
 di-project/app/cache/
+oauth-project/vendor/
+oauth-project/app/cache/

@@ -1,17 +1,18 @@
 <?php
 return array(
-	"siteUrl"=>"http://127.0.0.1:8090",
+	"siteUrl"=>"http://127.0.0.1:8091/",
 	"database"=>array(
 			"type"=>"mysql",
-			"dbName"=>"",
+			"dbName"=>"oauth-test2",
 			"serverName"=>"127.0.0.1",
 			"port"=>3306,
 			"user"=>"root",
 			"password"=>"",
 			"options"=>array(),
-			"cache"=>false
+			"cache"=>false,
+			"wrapper"=>"Ubiquity\\db\\providers\\pdo\\PDOWrapper"
 			),
-	"sessionName"=>"s5ca537d1bad44",
+	"sessionName"=>"s5ea03501b4367",
 	"namespaces"=>array(),
 	"templateEngine"=>"Ubiquity\\views\\engine\\Twig",
 	"templateEngineOptions"=>array(
@@ -19,7 +20,11 @@ return array(
 			),
 	"test"=>false,
 	"debug"=>true,
-	"logger"=>function (){return new \Ubiquity\log\libraries\UMonolog("auth-project",\Monolog\Logger::INFO);},
+	"logger"=>function (){return new \Ubiquity\log\libraries\UMonolog(array (
+  'host' => '127.0.0.1',
+  'port' => 8091,
+  'sessionName' => 's5ea03501b4367',
+)['sessionName'],\Monolog\Logger::INFO);},
 	"di"=>array(
 			"@exec"=>array(
 					"jquery"=>function ($controller){

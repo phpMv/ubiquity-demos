@@ -10,7 +10,7 @@ Demos applications for main features in [Ubiquity framework](https://ubiquity.ko
 |[richclient-project](https://github.com/phpMv/ubiquity-demos/tree/master/richclient-project) | Rich-client |Demo for phpMv-UI richclient library usage | [@jcheron](https://github.com/jcheron) |
 |[routes-project](https://github.com/phpMv/ubiquity-demos/tree/master/routes-project) | Router |Manipulates the router | [@jcheron](https://github.com/jcheron) |
 |[translations-project](https://github.com/phpMv/ubiquity-demos/tree/master/translations-project) | Translations |Manipulates translations | [@jcheron](https://github.com/jcheron) |
-|[oauth-project](https://github.com/phpMv/ubiquity-demos/tree/master/translations-project) | OAuth |Aouth client testing | [@jcheron](https://github.com/jcheron) |
+|[oauth-project](https://github.com/phpMv/ubiquity-demos/tree/master/oauth-project) | OAuth |OAuth client testing | [@jcheron](https://github.com/jcheron) |
 
 ## Further Reading / Useful Links
 

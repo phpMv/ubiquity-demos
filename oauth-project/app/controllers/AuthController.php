@@ -11,6 +11,8 @@ use Ajax\semantic\components\validation\Rule;
 use Ubiquity\orm\DAO;
 use controllers\traits\UITrait;
 use Ubiquity\utils\http\UResponse;
+use models\Authtokens;
+use Ubiquity\contents\transformation\TransformersManager;
 
 /**
  * Auth Controller AuthController
@@ -198,13 +200,28 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 	}
 
 	protected function toCookie($connected) {
-		return md5($connected->getLogin());
+		do {
+			$token = new Authtokens();
+			$token->setUserid($connected->getId());
+			TransformersManager::transformInstance($token, 'toView');
+			$saved = DAO::insert($token);
+		} while ($saved === false);
+		return $token->getSelector() . ':' . $token->getHashedValidator();
 	}
 
 	protected function fromCookie($cookie) {
-		$u = DAO::getOne(User::class, 'MD5(login)= ?', false, [
-			$cookie
+		list ($selector, $validator) = explode(':', $cookie);
+		DAO::$useTransformers = true;
+		$auth = DAO::getOne(Authtokens::class, 'selector= ?', [
+			'user'
+		], [
+			$selector
 		]);
-		return $u;
+		if (isset($auth) && ! $auth->isExpired()) {
+			if (hash_equals($auth->getHashedValidator(), $validator)) {
+				return $auth->getUser();
+			}
+		}
+		return null;
 	}
 }

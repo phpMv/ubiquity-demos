@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "43d4795923b74fdd1040e9a1fc55c60d",
+    "content-hash": "18a0d2aaf3f7d94af2cde248d8e6a243",
     "packages": [
         {
             "name": "frameworks/jquery",
@@ -416,6 +416,56 @@
                 "tools"
             ],
             "time": "2020-04-22T01:29:03+00:00"
+        },
+        {
+            "name": "phpmv/ubiquity-security",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpMv/ubiquity-security.git",
+                "reference": "ea075e729364f46ca6df97d021f5b476bc6d02cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpMv/ubiquity-security/zipball/ea075e729364f46ca6df97d021f5b476bc6d02cd",
+                "reference": "ea075e729364f46ca6df97d021f5b476bc6d02cd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4"
+            },
+            "type": "extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ubiquity\\": "src/Ubiquity/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jean-Christophe HERON",
+                    "email": "myaddressmail@gmail.com",
+                    "role": "Lead developer"
+                }
+            ],
+            "description": "Security module for Ubiquity framework",
+            "keywords": [
+                "framework",
+                "mvc",
+                "php",
+                "php-framework",
+                "security",
+                "tools"
+            ],
+            "time": "2020-05-02T02:16:35+00:00"
         },
         {
             "name": "phpmv/ubiquity-webtools",
@@ -878,7 +928,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "phpmv/ubiquity": 20,
-        "phpmv/ubiquity-webtools": 20
+        "phpmv/ubiquity-webtools": 20,
+        "phpmv/ubiquity-security": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -6,7 +6,8 @@
         "phpmv\/ubiquity-mailer": "^0.0",
         "phpmv\/php-mv-ui": "^2.3",
         "phpmv/ubiquity-oauth": "^0.0.2",
-        "phpmv/ubiquity-webtools": "dev-master"
+        "phpmv/ubiquity-webtools": "dev-master",
+        "phpmv/ubiquity-security": "dev-master"
     },
     "require-dev": {
         "monolog\/monolog": "^2.0",

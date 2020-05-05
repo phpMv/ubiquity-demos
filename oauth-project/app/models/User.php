@@ -32,7 +32,7 @@ class User {
 	/**
 	 *
 	 * @column("name"=>"password","nullable"=>false,"dbType"=>"varchar(128)")
-	 * @validator("length","constraints"=>array("max"=>128,"notNull"=>true))
+	 * @validator("password","constraints"=>array("max"=>10,"uppercase"=>2,"min"=>5),"group"=>"signup")
 	 */
 	private $password;
 

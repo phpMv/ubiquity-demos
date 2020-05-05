@@ -13,6 +13,7 @@ use controllers\traits\UITrait;
 use Ubiquity\utils\http\UResponse;
 use models\Authtokens;
 use Ubiquity\contents\transformation\TransformersManager;
+use Ubiquity\contents\validation\ValidatorsManager;
 
 /**
  * Auth Controller AuthController
@@ -122,7 +123,11 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 		$frm->fieldAsInput('password', [
 			'inputType' => 'password',
 			'rules' => [
-				'empty'
+				'empty',
+				[
+					'checkPassword',
+					"%function(value){return $('[name=password]')[0].prompt;}%"
+				]
 			]
 		]);
 		$frm->fieldAsInput('passwordConf', [
@@ -152,6 +157,9 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 		]);
 
 		$this->jquery->exec(Rule::ajax($this->jquery, "checkLogin", "/login/_checkLogin", "{}", "result=data.result;", "postForm", [
+			"form" => "frm-signup"
+		]), true);
+		$this->jquery->exec(Rule::ajax($this->jquery, "checkPassword", "/login/_checkPassword", "{}", "$('[name=password]')[0].prompt=data.message;result=data.result;", "postForm", [
 			"form" => "frm-signup"
 		]), true);
 		$frm->addSeparatorAfter('title');
@@ -188,6 +196,23 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 			'result' => ! DAO::exists(User::class, 'login= ?', [
 				$login
 			])
+		]);
+	}
+
+	/**
+	 *
+	 * @post
+	 */
+	public function _checkPassword() {
+		UResponse::asJSON();
+		$password = URequest::post('password');
+		$user = new User();
+		$user->setPassword($password);
+		$violations = ValidatorsManager::validate($user, "signup");
+		$hasError = (count($violations) > 0);
+		echo json_encode([
+			'result' => ! $hasError,
+			'message' => ($hasError) ? $violations[0]->getMessage() : ''
 		]);
 	}
 

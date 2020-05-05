@@ -3,6 +3,7 @@ namespace controllers;
 
 use Ubiquity\controllers\Controller;
 use Ubiquity\utils\http\URequest;
+use Ubiquity\security\csrf\UCsrfHttp;
 
 /**
  * ControllerBase.
@@ -15,7 +16,9 @@ abstract class ControllerBase extends Controller {
 
 	public function initialize() {
 		if (! URequest::isAjax() && ! URequest::has('_initialize')) {
-			$this->loadView($this->headerView);
+			$this->loadView($this->headerView, [
+				'csrf' => UCsrfHttp::getTokenMeta('bar')
+			]);
 			URequest::set('_initialize');
 		}
 	}

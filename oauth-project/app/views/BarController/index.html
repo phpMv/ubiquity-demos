@@ -2,3 +2,9 @@
 	{{ _userInfo | raw }}
 </div>
 <h1>Bar index</h1>
+
+<form class="ui form" action="{{path('submit-bar')}}" method="post">
+{{csrf|raw}}
+<input class="ui input" name="login">
+<button class="ui button">Submit</button>
+</form>

@@ -6,7 +6,7 @@ use models\User;
 use Ubiquity\controllers\Router;
 
 /**
- * Controller BarController
+ * Controller UsersJqueryController
  *
  * @property \Ajax\php\ubiquity\JsUtils $jquery
  * @route("users")
@@ -36,8 +36,7 @@ class UsersJqueryController extends ControllerBase {
 		$this->jquery->postOnClick('li[data-ajax]', Router::path('display.one.user', [
 			""
 		]), '{}', '#user-detail', [
-			'attr' => 'data-ajax',
-			'hasLoader' => false
+			'attr' => 'data-ajax'
 		]);
 		$this->jquery->renderDefaultView([
 			'users' => $users

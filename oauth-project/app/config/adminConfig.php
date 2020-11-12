@@ -55,7 +55,8 @@ return array(
 			"composer",
 			"oauth",
 			"logs",
-			"git"
+			"git",
+			"mailer"
 			),
 	"oauth-providers"=>array(
 			"Google"=>true,

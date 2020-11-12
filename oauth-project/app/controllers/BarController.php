@@ -16,9 +16,7 @@ class BarController extends ControllerBase {
 	 */
 	public function index() {
 		UCsrfHttp::addCookieToken('bar', '/', false, false);
-		$this->loadView("BarController/index.html", [
-			'csrf' => UCsrfHttp::getTokenField('bar')
-		]);
+		$this->loadView("BarController/index.html");
 	}
 
 	/**
@@ -29,6 +27,7 @@ class BarController extends ControllerBase {
 		if (UCsrfHttp::isValidPost('bar') && UCsrfHttp::isValidCookie('bar')) {
 			var_dump($_POST);
 		} else {
+			echo 'Invalid post!';
 			var_dump($_COOKIE);
 		}
 	}

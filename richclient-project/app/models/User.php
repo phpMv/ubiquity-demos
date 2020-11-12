@@ -1,65 +1,71 @@
 <?php
 namespace models;
-class User{
+
+class User {
+
 	/**
+	 *
 	 * @id
 	 * @column("name"=>"id","nullable"=>false,"dbType"=>"int(11)")
 	 * @validator("id","constraints"=>array("autoinc"=>true))
-	**/
+	 */
 	private $id;
 
 	/**
+	 *
 	 * @column("name"=>"firstname","nullable"=>false,"dbType"=>"varchar(30)")
 	 * @validator("length","constraints"=>array("max"=>30,"notNull"=>true))
-	**/
+	 */
 	private $firstname;
 
 	/**
+	 *
 	 * @column("name"=>"lastname","nullable"=>false,"dbType"=>"varchar(30)")
 	 * @validator("length","constraints"=>array("max"=>30,"notNull"=>true))
-	**/
+	 */
 	private $lastname;
 
 	/**
+	 *
 	 * @column("name"=>"password","nullable"=>false,"dbType"=>"varchar(30)")
 	 * @validator("length","constraints"=>array("max"=>30,"notNull"=>true))
-	**/
+	 * @transformer("password")
+	 */
 	private $password;
 
-	 public function getId(){
+	public function getId() {
 		return $this->id;
 	}
 
-	 public function setId($id){
-		$this->id=$id;
+	public function setId($id) {
+		$this->id = $id;
 	}
 
-	 public function getFirstname(){
+	public function getFirstname() {
 		return $this->firstname;
 	}
 
-	 public function setFirstname($firstname){
-		$this->firstname=$firstname;
+	public function setFirstname($firstname) {
+		$this->firstname = $firstname;
 	}
 
-	 public function getLastname(){
+	public function getLastname() {
 		return $this->lastname;
 	}
 
-	 public function setLastname($lastname){
-		$this->lastname=$lastname;
+	public function setLastname($lastname) {
+		$this->lastname = $lastname;
 	}
 
-	 public function getPassword(){
+	public function getPassword() {
 		return $this->password;
 	}
 
-	 public function setPassword($password){
-		$this->password=$password;
+	public function setPassword($password) {
+		$this->password = $password;
 	}
 
-	 public function __toString(){
+	public function __toString() {
 		return $this->lastname;
 	}
-
 }

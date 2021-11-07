@@ -28,15 +28,15 @@ class FileUploadTester extends \controllers\ControllerBase{
 		$upload->upload('upload');
 		if ($upload->hasErrors()) {
 			$toast=$this->jquery->semantic()->toast('body');
-			$toast->setTitle('File download');
+			$toast->setTitle('File upload');
 			$toast->setMessage((new HtmlList('lst',$upload->getErrorMessages()))->compile());
 			$toast->setShowIcon('warning circle');
 			$toast->setClass('error');
 		}
 		if ($upload->isSuccess()) {
 			$msg=$this->jquery->semantic()->htmlMessage('msg','','success');
-			$msg->addHeader('File download');
-			$msg->setIcon('download');
+			$msg->addHeader('File upload');
+			$msg->setIcon('upload');
 			$msg->addList($upload->getMessages());
 			echo $msg;
 		}

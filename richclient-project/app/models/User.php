@@ -1,6 +1,11 @@
 <?php
 namespace models;
 
+use Ubiquity\attributes\items\Column;
+use Ubiquity\attributes\items\Id;
+use Ubiquity\attributes\items\Transformer;
+use Ubiquity\attributes\items\Validator;
+
 class User {
 
 	/**
@@ -9,6 +14,9 @@ class User {
 	 * @column("name"=>"id","nullable"=>false,"dbType"=>"int(11)")
 	 * @validator("id","constraints"=>array("autoinc"=>true))
 	 */
+	#[Id()]
+	#[Column(name: 'id',nullable: false,dbType: 'int(11)')]
+	#[Validator('id',constraints: ['autoinc'=>true])]
 	private $id;
 
 	/**
@@ -16,6 +24,8 @@ class User {
 	 * @column("name"=>"firstname","nullable"=>false,"dbType"=>"varchar(30)")
 	 * @validator("length","constraints"=>array("max"=>30,"notNull"=>true))
 	 */
+	#[Column(name: 'firstname',nullable: false,dbType: 'varchar(30)')]
+	#[Validator('length',constraints: ['max'=>30,'notNull'=>true])]
 	private $firstname;
 
 	/**
@@ -23,6 +33,8 @@ class User {
 	 * @column("name"=>"lastname","nullable"=>false,"dbType"=>"varchar(30)")
 	 * @validator("length","constraints"=>array("max"=>30,"notNull"=>true))
 	 */
+	#[Column(name: 'lastname',nullable: false,dbType: 'varchar(30)')]
+	#[Validator('length',constraints: ['max'=>30,'notNull'=>true])]
 	private $lastname;
 
 	/**
@@ -31,6 +43,9 @@ class User {
 	 * @validator("length","constraints"=>array("max"=>30,"notNull"=>true))
 	 * @transformer("password")
 	 */
+	#[Column(name: 'password',nullable: false,dbType: 'varchar(30)')]
+	#[Validator('length',constraints: ['max'=>30,'notNull'=>true])]
+	#[Transformer('password')]
 	private $password;
 
 	public function getId() {

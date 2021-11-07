@@ -1,6 +1,8 @@
 <?php
 namespace controllers;
 
+use Ubiquity\attributes\items\router\Get;
+use Ubiquity\attributes\items\router\Route;
 use Ubiquity\controllers\Router;
 use Ubiquity\orm\DAO;
 use models\User;
@@ -11,6 +13,7 @@ use models\User;
  * @property \Ajax\php\ubiquity\JsUtils $jquery
  * @route("users-compo")
  */
+#[Route('users-compo')]
 class UsersCompoController extends ControllerBase {
 
 	private function semantic() {
@@ -21,6 +24,7 @@ class UsersCompoController extends ControllerBase {
 	 *
 	 * @get
 	 */
+	#[Get]
 	public function index() {
 		$bt = $this->semantic()->htmlButton('users-bt', 'Display users');
 		$bt->addIcon('users');
@@ -34,6 +38,7 @@ class UsersCompoController extends ControllerBase {
 	 *
 	 * @get("all","name"=>"display.compo.users")
 	 */
+	#[Get('all',name:'display.compo.users')]
 	public function displayUsers() {
 		$users = DAO::getAll(User::class);
 		$this->jquery->click('#close-bt', '$("#users").html("");');

@@ -18,7 +18,7 @@ class FileUploadTester extends \controllers\ControllerBase{
 		$div=$this->jquery->semantic()->htmlSegment('div');
 		$div->setStyle('width:100%;min-height:300px');
 		$div->addDimmer(["on"=>"hover","opacity"=>0.5])->asIcon('download','Uploadez vos fichiers ici');
-		$progress=$div->asFileDropZone( '#div','/upload','Téléchargement de fichiers');
+		$progress=$div->asFileDropZone( '#div','/upload','Téléchargement de fichiers','',['ajaxAttributes'=>['jqueryDone'=>'append']]);
 		$this->jquery->renderView("FileUploadTester/index.html");
 	}
 

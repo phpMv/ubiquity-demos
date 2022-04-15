@@ -39,11 +39,11 @@ class BasicAuthController extends \Ubiquity\controllers\auth\AuthController {
 	 * {@inheritdoc}
 	 * @see \Ubiquity\controllers\auth\AuthController::isValidUser()
 	 */
-	public function _isValidUser($action = null) {
+	public function _isValidUser($action = null):bool {
 		return USession::exists($this->_getUserSessionKey());
 	}
 
-	public function _getBaseRoute() {
+	public function _getBaseRoute(): string {
 		return 'BasicAuthController';
 	}
 
@@ -56,12 +56,12 @@ class BasicAuthController extends \Ubiquity\controllers\auth\AuthController {
 	 * {@inheritdoc}
 	 * @see \Ubiquity\controllers\auth\AuthController::_getLoginInputName()
 	 */
-	public function _getLoginInputName() {
+	public function _getLoginInputName(): string {
 		return "email";
 	}
 
-	public function _displayInfoAsString() {
-		return true;
+	public function _displayInfoAsString(): bool {
+		return false;
 	}
 
 	/**
@@ -69,7 +69,7 @@ class BasicAuthController extends \Ubiquity\controllers\auth\AuthController {
 	 * {@inheritdoc}
 	 * @see \Ubiquity\controllers\auth\AuthController::_checkConnectionTimeout()
 	 */
-	public function _checkConnectionTimeout() {
+	public function _checkConnectionTimeout(): int {
 		return 10000;
 	}
 
@@ -78,11 +78,11 @@ class BasicAuthController extends \Ubiquity\controllers\auth\AuthController {
 	 * {@inheritdoc}
 	 * @see \Ubiquity\controllers\auth\AuthController::attemptsNumber()
 	 */
-	protected function attemptsNumber() {
+	protected function attemptsNumber(): int {
 		return 3;
 	}
 
-	public function _getBodySelector() {
+	public function _getBodySelector(): string {
 		return "#main-content";
 	}
 

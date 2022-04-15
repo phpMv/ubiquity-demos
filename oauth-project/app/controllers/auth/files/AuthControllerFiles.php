@@ -6,27 +6,27 @@ use Ubiquity\controllers\auth\AuthFiles;
  * Class AuthControllerFiles
  **/
 class AuthControllerFiles extends AuthFiles{
-	public function getViewIndex(){
+	public function getViewIndex(): string{
 		return "AuthController/index.html";
 	}
 
-	public function getViewInfo(){
+	public function getViewInfo(): string{
 		return "AuthController/info.html";
 	}
 
-	public function getViewNoAccess(){
+	public function getViewNoAccess(): string{
 		return "AuthController/noAccess.html";
 	}
 
-	public function getViewDisconnected(){
+	public function getViewDisconnected(): string{
 		return "AuthController/disconnected.html";
 	}
 
-	public function getViewMessage(){
+	public function getViewMessage(): string{
 		return "AuthController/message.html";
 	}
 
-	public function getViewBaseTemplate(){
+	public function getViewBaseTemplate(): string{
 		return "AuthController/baseTemplate.html";
 	}
 

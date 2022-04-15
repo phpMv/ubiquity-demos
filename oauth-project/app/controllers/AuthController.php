@@ -1,6 +1,7 @@
 <?php
 namespace controllers;
 
+use Ubiquity\attributes\items\router\Route;
 use Ubiquity\utils\http\USession;
 use Ubiquity\utils\http\URequest;
 use controllers\auth\files\AuthControllerFiles;
@@ -21,6 +22,7 @@ use Ubiquity\contents\validation\ValidatorsManager;
  * @property \Ajax\php\ubiquity\JsUtils $jquery
  * @route("login","automated"=>true,"inherited"=>true)
  */
+#[Route('login', inherited: true, automated: true)]
 class AuthController extends \Ubiquity\controllers\auth\AuthController {
 	use UITrait;
 
@@ -66,11 +68,11 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 	 * {@inheritdoc}
 	 * @see \Ubiquity\controllers\auth\AuthController::isValidUser()
 	 */
-	public function _isValidUser($action = null) {
+	public function _isValidUser($action = null): bool {
 		return USession::exists($this->_getUserSessionKey());
 	}
 
-	public function _getBaseRoute() {
+	public function _getBaseRoute(): string {
 		return 'login';
 	}
 
@@ -78,7 +80,7 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 		return new AuthControllerFiles();
 	}
 
-	public function _displayInfoAsString() {
+	public function _displayInfoAsString(): bool {
 		return true;
 	}
 
@@ -216,15 +218,15 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 		]);
 	}
 
-	public function _getLoginInputName() {
+	public function _getLoginInputName(): string {
 		return 'login';
 	}
 
-	public function _checkConnectionTimeout() {
+	public function _checkConnectionTimeout(): int {
 		return 10000;
 	}
 
-	protected function toCookie($connected) {
+	protected function toCookie($connected): string {
 		do {
 			$token = new Authtokens();
 			$token->setUserid($connected->getId());

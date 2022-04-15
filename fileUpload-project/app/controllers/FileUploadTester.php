@@ -42,5 +42,9 @@ class FileUploadTester extends \controllers\ControllerBase{
 		}
 		echo $this->jquery->compile();
 	}
+	#[Route('test/{id}')]
+	public function testRoute($a=1){
+
+	}
 
 }

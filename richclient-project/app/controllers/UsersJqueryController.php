@@ -1,13 +1,19 @@
 <?php
 namespace controllers;
 
+use Ajax\php\ubiquity\utils\DataFormHelper;
 use Ajax\semantic\html\base\constants\Direction;
 use Ubiquity\attributes\items\router\Get;
 use Ubiquity\attributes\items\router\Post;
 use Ubiquity\attributes\items\router\Route;
+use Ubiquity\contents\validation\ValidatorsManager;
+use Ubiquity\controllers\crud\CRUDController;
+use Ubiquity\controllers\crud\viewers\ModelViewer;
+use Ubiquity\controllers\crud\viewers\traits\FormModelViewerTrait;
 use Ubiquity\orm\DAO;
 use models\User;
 use Ubiquity\controllers\Router;
+use Ubiquity\orm\OrmUtils;
 
 /**
  * Controller UsersJqueryController
@@ -64,11 +70,19 @@ class UsersJqueryController extends ControllerBase {
 			'user' => $user
 		]);
 	}
-	#[Get('/test')]
-	public function testAction(){
-		$frm=$this->jquery->semantic()->htmlForm('frm');
-		$input=$frm->addInput('password','Password','password');
-		$input->addIcon('users');
+
+	#[Get('/update/{userId}')]
+	public function formUserAction(int $userId){
+		$user=DAO::getById(User::class,$userId,false)??new User();
+		$frm=$this->jquery->semantic()->dataForm('frm-user',$user);
+		DataFormHelper::defaultFields($frm);
+		$frm->addField('submit');
+		DataFormHelper::defaultUIConstraints($frm);
+		$frm->fieldAsHidden('id');
+		$frm->setCaptions(['','Firstname','Lastname','Password','Send modifications']);
+		$frm->fieldAsSubmit('submit','green fluid',Router::path('display.one.user',[$userId]),'main .ui.container',['hasLoader'=>false]);
+		$frm->addSeparatorAfter(2);
+		$frm->addDividerBefore('submit','');
 		$this->jquery->renderDefaultView();
 	}
 }

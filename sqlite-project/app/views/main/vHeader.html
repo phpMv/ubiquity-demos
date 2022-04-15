@@ -5,7 +5,7 @@
 	<base href="{{config["siteUrl"]}}">
 	<meta charset="UTF-8">
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-	<title>sqlite-project</title>
+	<title>Sqlite-project</title>
 {% endblock %}
 {% block css %}
 	{{ css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css',{nonce: nonce}) }}
@@ -14,4 +14,14 @@
 </head>
 <body>
 {% block head %}
+	<div class="main-container">
+		<header>
+			<div class="ui container">
+				<div class="ui secondary inverted menu">
+					<a href="/" class="active item">Home</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="ui container">
 {% endblock %}

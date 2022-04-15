@@ -4,13 +4,24 @@
 {% block header %}
 	<base href="{{config["siteUrl"]}}">
 	<meta charset="UTF-8">
-	<title>translations-project</title>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<title>Translations-project</title>
 {% endblock %}
 {% block css %}
-	{{ css('https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css') }}
-	{{css('css/style.css') | raw}}
+	{{ css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css',{nonce: nonce}) }}
+	{{css('css/style.css', {nonce: nonce})}}
 {% endblock %}
 </head>
 <body>
 {% block head %}
+	<div class="main-container">
+		<header>
+			<div class="ui container">
+				<div class="ui secondary inverted menu">
+					<a href="/" class="active item">Home</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="ui container">
 {% endblock %}

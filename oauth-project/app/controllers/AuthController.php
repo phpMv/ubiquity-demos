@@ -1,6 +1,7 @@
 <?php
 namespace controllers;
 
+use Ubiquity\attributes\items\router\Post;
 use Ubiquity\attributes\items\router\Route;
 use Ubiquity\utils\http\USession;
 use Ubiquity\utils\http\URequest;
@@ -88,6 +89,7 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 	 *
 	 * @route("name"=>"signup")
 	 */
+	#[Route(name: 'signup')]
 	public function signup() {
 		$frm = $this->jquery->semantic()->dataForm('frm-signup', new User());
 		$frm->setFields([
@@ -174,6 +176,7 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 	 *
 	 * @post
 	 */
+	#[Post]
 	public function _signup() {
 		$u = new User();
 		URequest::password_hash('password');
@@ -191,6 +194,7 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 	 *
 	 * @post
 	 */
+	#[Post]
 	public function _checkLogin() {
 		UResponse::asJSON();
 		$login = URequest::post('login');
@@ -205,6 +209,7 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 	 *
 	 * @post
 	 */
+	#[Post]
 	public function _checkPassword() {
 		UResponse::asJSON();
 		$password = URequest::post('password');

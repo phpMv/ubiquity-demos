@@ -2,6 +2,7 @@
 namespace controllers;
 
 use Hybridauth\Adapter\AdapterInterface;
+use Ubiquity\attributes\items\router\Route;
 use Ubiquity\controllers\auth\WithAuthTrait;
 use Ubiquity\orm\DAO;
 use Ubiquity\utils\http\USession;
@@ -25,6 +26,7 @@ class OAuthController extends \Ubiquity\controllers\auth\AbstractOAuthController
 	 *
 	 * @route("index","name"=>"oauth-index")
 	 */
+	#[Route('index',name: 'oauth-index')]
 	public function index() {
 		$this->loadView('OAuthController/index.html');
 	}
@@ -33,6 +35,7 @@ class OAuthController extends \Ubiquity\controllers\auth\AbstractOAuthController
 	 *
 	 * @route("Auth/login/{name}")
 	 */
+	#[Route('Auth/login/{name}')]
 	public function _oauth(string $name): void {
 		parent::_oauth($name);
 	}
@@ -41,6 +44,7 @@ class OAuthController extends \Ubiquity\controllers\auth\AbstractOAuthController
 	 *
 	 * @route("test","name"=>"test")
 	 */
+	#[Route('test',name: 'test')]
 	public function test() {
 		echo 'test ok!';
 		echo $this->getAuthController()->_getActiveUser();
@@ -66,7 +70,7 @@ class OAuthController extends \Ubiquity\controllers\auth\AbstractOAuthController
 		return new AuthController($this);
 	}
 
-	public function isValid($action) {
+	public function isValid($action):bool {
 		if ($action !== '_oauth') {
 			return $this->_isValidAuth($action);
 		}

@@ -1,6 +1,8 @@
 <?php
 namespace controllers;
 
+use Ubiquity\attributes\items\router\Post;
+use Ubiquity\attributes\items\router\Route;
 use Ubiquity\cache\CacheManager;
 use Ubiquity\controllers\Startup;
 use Ubiquity\db\Database;
@@ -25,6 +27,7 @@ class MainController extends ControllerBase {
 	 *
 	 * @route("_default")
 	 */
+	#[Route('_default')]
 	public function index() {
 		try {
 			$config = Startup::$config;
@@ -44,6 +47,7 @@ class MainController extends ControllerBase {
 	 *
 	 * @post("createDb")
 	 */
+	#[Post('createDb')]
 	public function createDb() {
 		$dbName = URequest::post('db', 'oauth-test');
 		$config = Startup::$config;

@@ -30,7 +30,8 @@ class AuthController extends \Ubiquity\controllers\auth\AuthController {
 	public function index() {
 		$providers = OAuthAdmin::getEnabledProviders();
 		$bts = $this->jquery->semantic()->htmlButtonGroups('bts');
-		foreach ($providers as $icon => $name) {
+		foreach ($providers as $name) {
+			$icon=strtolower($name);
 			$bt = $bts->addElement($name);
 			$bt->addIcon($icon);
 			$bt->addClass($icon . " plus");

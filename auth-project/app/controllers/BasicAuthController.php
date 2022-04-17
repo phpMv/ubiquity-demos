@@ -1,6 +1,7 @@
 <?php
 namespace controllers;
 
+use Ubiquity\attributes\items\router\Route;
 use Ubiquity\controllers\Router;
 use Ubiquity\controllers\Startup;
 use Ubiquity\controllers\Auth\AuthFiles;
@@ -12,6 +13,7 @@ use controllers\auth\files\BasicAuthControllerFiles;
 /**
  * Auth Controller BasicAuthController
  */
+#[Route('auth',inherited: true,automated: true)]
 class BasicAuthController extends \Ubiquity\controllers\auth\AuthController {
 
 	protected function onConnect($connected) {
@@ -47,7 +49,7 @@ class BasicAuthController extends \Ubiquity\controllers\auth\AuthController {
 	}
 
 	public function _getBaseRoute(): string {
-		return 'BasicAuthController';
+		return 'auth';
 	}
 
 	protected function getFiles(): AuthFiles {

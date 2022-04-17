@@ -1,13 +1,13 @@
 {% extends "@framework/auth/info.html" %}
 {% block _before %}
-<div class="ui tertiary inverted gray segment">
+<div class="ui tertiary inverted red segment">
 	<div class="ui right aligned grid">
 		<div class="left floated right aligned ten wide column">
 		</div>
 		<div class="left floated right aligned six wide column">
 {% endblock %}
 {% block _userInfo %}
-	<div class="ui icon label">
+	<div class="ui icon basic label">
 	<i class="user icon"></i>
 	{{ connected | raw }}
 	</div>

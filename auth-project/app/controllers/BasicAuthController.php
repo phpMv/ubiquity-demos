@@ -1,9 +1,11 @@
 <?php
 namespace controllers;
 
+use Ubiquity\controllers\Router;
 use Ubiquity\controllers\Startup;
 use Ubiquity\controllers\Auth\AuthFiles;
 use Ubiquity\utils\http\URequest;
+use Ubiquity\utils\http\UResponse;
 use Ubiquity\utils\http\USession;
 use controllers\auth\files\BasicAuthControllerFiles;
 
@@ -16,10 +18,11 @@ class BasicAuthController extends \Ubiquity\controllers\auth\AuthController {
 		$urlParts = $this->getOriginalURL();
 		USession::set($this->_getUserSessionKey(), $connected);
 		if (isset($urlParts)) {
-			$this->_forward(implode("/", $urlParts));
+			$url=URequest::getUrl(implode("/", $urlParts));
 		} else {
-			Startup::forward("Admin");
+			$url=URequest::getUrl('/Admin');
 		}
+		UResponse::forward($url);
 	}
 
 	protected function _connect() {
@@ -61,7 +64,7 @@ class BasicAuthController extends \Ubiquity\controllers\auth\AuthController {
 	}
 
 	public function _displayInfoAsString(): bool {
-		return false;
+		return true;
 	}
 
 	/**
@@ -94,15 +97,4 @@ class BasicAuthController extends \Ubiquity\controllers\auth\AuthController {
 		return $cookie;
 	}
 
-	protected function initializeAuth() {
-		if (! URequest::isAjax()) {
-			$this->loadView("@activeTheme/main/vHeader.html");
-		}
-	}
-
-	protected function finalizeAuth() {
-		if (! URequest::isAjax()) {
-			$this->loadView("@activeTheme/main/vFooter.html");
-		}
-	}
 }

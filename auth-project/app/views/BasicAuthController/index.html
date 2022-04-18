@@ -3,32 +3,11 @@
 	{{ parent() }}
 	<div class="ui green segment">
 {% endblock %}
-{% block _form %}
-	{{ parent() }}
-{% endblock %}
 {% block _header %}
-<h4 class="ui header dividing">Connection to UbiquityMyAdmin</h4> 
-{% endblock %}
-{% block _fields %}
-	{{ parent() }}
-{% endblock %}
-{% block _fieldLogin %}
-	{{ parent() }}
+<h4 class="ui header dividing">Connection to Webtools</h4>
 {% endblock %}
 {% block _login %}
 	<input id="{{loginInputName}}" name="{{loginInputName}}" type="text" placeholder="{{loginLabel}}" value="root@dev.local">
-{% endblock %}
-{% block _fieldPassword %}
-	{{ parent() }}
-{% endblock %}
-{% block _password %}
-	{{ parent() }}
-{% endblock %}
-{% block _extraFields %}
-	{{ parent() }}
-{% endblock %}
-{% block _fieldRemember %}
-	{{ parent() }}
 {% endblock %}
 {% block _buttons %}
 <button class="ui button green fluid ajax _connect">Connection</button>

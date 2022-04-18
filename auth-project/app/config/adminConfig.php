@@ -1,52 +1,53 @@
 <?php
 return array(
 	"devtools-path"=>"Ubiquity",
-	"info"=>array(),
-	"display-cache-types"=>array(
+	"info"=>[],
+	"display-cache-types"=>[
 			"controllers",
 			"models",
 			"views",
 			"queries"
-			),
-	"maintenance"=>array(
+			],
+	"maintenance"=>[
 			"on"=>false,
-			"modes"=>array(
-					"maintenance"=>array(
-							"excluded"=>array(
-									"urls"=>array(
+			"modes"=>[
+					"maintenance"=>[
+							"excluded"=>[
+									"urls"=>[
 											"admin",
 											"Admin"
-											),
-									"ports"=>array(
+											],
+									"ports"=>[
 											8080,
 											8090
-											),
-									"hosts"=>array(
+											],
+									"hosts"=>[
 											"127.0.0.1"
-											)
-									),
+											]
+									],
 							"controller"=>"\\controllers\\MaintenanceController",
 							"action"=>"index",
 							"title"=>"Maintenance mode",
 							"icon"=>"recycle",
 							"message"=>"Our application is currently undergoing sheduled maintenance.<br>Thank you for your understanding."
-							)
-					)
-			),
+							]
+					]
+			],
 	"email"=>"root@dev.local",
 	"password"=>"admin",
-	"part1"=>array(
+	"part1"=>[
 			"models",
 			"routes",
 			"controllers",
 			"cache",
 			"rest",
 			"config"
-			),
-	"part2"=>array(
+			],
+	"part2"=>[
 			"seo",
 			"translate",
 			"composer",
 			"logs"
-			)
+			],
+	"domain"=>""
 	);

@@ -6,6 +6,7 @@ use Ajax\semantic\html\base\constants\Direction;
 use Ubiquity\attributes\items\router\Get;
 use Ubiquity\attributes\items\router\Post;
 use Ubiquity\attributes\items\router\Route;
+use Ubiquity\cache\CacheManager;
 use Ubiquity\contents\validation\ValidatorsManager;
 use Ubiquity\controllers\crud\CRUDController;
 use Ubiquity\controllers\crud\viewers\ModelViewer;
@@ -84,5 +85,10 @@ class UsersJqueryController extends ControllerBase {
 		$frm->addSeparatorAfter(2);
 		$frm->addDividerBefore('submit','');
 		$this->jquery->renderDefaultView();
+	}
+	#[Get('expire')]
+	public function expire(){
+		CacheManager::setExpired(Router::path('display.users'));
+		echo 'cache expired';
 	}
 }

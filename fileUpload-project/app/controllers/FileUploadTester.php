@@ -25,6 +25,7 @@ class FileUploadTester extends \controllers\ControllerBase{
 	#[Route('upload')]
 	public function upload() {
 		$upload = new UFilesUpload();
+		$upload->setAllowedMimeTypes(['txt'=>'text/plain','png'=>'image/png']);
 		$upload->upload('upload');
 		if ($upload->hasErrors()) {
 			$toast=$this->jquery->semantic()->toast('body');
@@ -41,10 +42,6 @@ class FileUploadTester extends \controllers\ControllerBase{
 			echo $msg;
 		}
 		echo $this->jquery->compile();
-	}
-	#[Route('test/{id}')]
-	public function testRoute($a=1){
-
 	}
 
 }

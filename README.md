@@ -6,7 +6,7 @@ Demos applications for main features in [Ubiquity framework](https://ubiquity.ko
 | Project  | Framework part | Description | Author |
 |----------|----------------|-------------|--------|
 |[auth-project](https://github.com/phpMv/ubiquity-demos/tree/master/auth-project) | Authentification |Adds basic authentification to `Admin` controller | [@jcheron](https://github.com/jcheron) |
-|[auth-acl-project](https://github.com/phpMv/ubiquity-demos/tree/master/auth-acl-project) | Authentification with Acls |Adds authentification with Acls | [@jcheron](https://github.com/jcheron) |
+|[auth-acl-project](https://github.com/phpMv/ubiquity-demos/tree/master/auth-acl-project) | Authentification and Acls |Adds authentification with Acls | [@jcheron](https://github.com/jcheron) |
 |[di-project](https://github.com/phpMv/ubiquity-demos/tree/master/di-project) | Dependency injection |Illustrates di mechanism | [@jcheron](https://github.com/jcheron) |
 |[richclient-project](https://github.com/phpMv/ubiquity-demos/tree/master/richclient-project) | Rich-client |Demo for phpMv-UI richclient library usage | [@jcheron](https://github.com/jcheron) |
 |[routes-project](https://github.com/phpMv/ubiquity-demos/tree/master/routes-project) | Router |Manipulates the router | [@jcheron](https://github.com/jcheron) |

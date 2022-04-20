@@ -17,6 +17,7 @@ You will need the following things properly installed on your computer.
 * `git clone <repository-url>` this repository
 * `cd auth-acl-project`
 * `composer install`
+* import `db/acl-guide.sql` in Mysql
 
 ## Running / Development
 

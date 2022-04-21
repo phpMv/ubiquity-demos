@@ -14,6 +14,7 @@ Demos applications for main features in [Ubiquity framework](https://ubiquity.ko
 |[oauth-project](https://github.com/phpMv/ubiquity-demos/tree/master/oauth-project) | OAuth |OAuth client testing | [@jcheron](https://github.com/jcheron) |
 |[sqlite-project](https://github.com/phpMv/ubiquity-demos/tree/master/sqlite-project) | Database |Database with sqlite | [@jcheron](https://github.com/jcheron) |
 |[fileupload-project](https://github.com/phpMv/ubiquity-demos/tree/master/fileupload-project) | Components |A file upload sample | [@jcheron](https://github.com/jcheron) |
+|[database-project](https://github.com/phpMv/ubiquity-demos/tree/master/database-project) | Database |Mysql database sample with obfuscated ids| [@jcheron](https://github.com/jcheron) |
 
 ## Further Reading / Useful Links
 

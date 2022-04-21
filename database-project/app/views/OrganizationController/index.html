@@ -1,0 +1,12 @@
+<h2>Organizations</h2>
+<div class="ui middle aligned divided list">
+    {% for orga in all %}
+    <div class="item">
+        <i class="large github middle aligned icon"></i>
+        <div class="content">
+            <a href="{{ path('users.one',[orga.uuid]) }}" class="header">{{ orga.name }}</a>
+            <div class="description">{{ orga.domain }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

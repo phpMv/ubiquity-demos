@@ -1,0 +1,7 @@
+<h2>{{ byId }}</h2>
+<h3>Groups</h3>
+<div class="ui middle aligned divided list">
+    {% for group in byId.groups %}
+    <div class="item">{{ group }}</div>
+    {% endfor %}
+</div>

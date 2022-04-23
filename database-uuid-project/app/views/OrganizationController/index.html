@@ -1,12 +1,28 @@
-<h2>Organizations</h2>
-<div class="ui middle aligned divided list">
-    {% for orga in all %}
-    <div class="item">
-        <i class="large github middle aligned icon"></i>
-        <div class="content">
-            <a href="{{ path('orgas.one',[orga.uuid]) }}" class="header" data-target="#response">{{ orga.name }}</a>
-            <div class="description">{{ orga.domain }}</div>
+<div id="main-orgas">
+    <h2>Organizations</h2>
+    <a class="ui teal button _new" href="{{ path('orgas.add') }}">New organization</a>
+    <div class="ui middle aligned divided list">
+        {% for orga in all %}
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui black mini icon button _update" data-ajax="{{ orga.uuid }}">
+                    <i class="ui edit icon"></i>
+                </div>
+                <div class="ui red mini icon button _delete" data-ajax="{{ orga.uuid }}">
+                    <i class="ui remove icon"></i>
+                </div>
+            </div>
+            <i class="large city middle aligned icon"></i>
+            <div class="content">
+                <a href="{{ path('orgas.one',[orga.uuid]) }}" class="header" data-target="#response">{{ orga.name }}</a>
+                <div class="description">{{ orga.domain }}</div>
+            </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
+<div id="form-orgas"></div>
+<div id="_ajax"></div>
+{%  if app.getRequest().isAjax() %}
+{{ script_foot|raw }}
+{% endif %}

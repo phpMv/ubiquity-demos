@@ -1,0 +1,17 @@
+{% block footer %}
+    </div>
+</main>
+    <footer>
+        <div class="ui container">
+            Designed with <a href="https://ubiquity.kobject.net">Ubiquity framework</a><br>
+            {{ _self }}
+        </div>
+    </footer>
+    </div>
+{% endblock %}
+{% block scripts %}
+{{ js('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js',{nonce: nonce}) }}
+{{ js('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js',{nonce: nonce}) }}
+{% endblock %}
+</body>
+</html>

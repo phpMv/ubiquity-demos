@@ -1,0 +1,12 @@
+<h1>Messages</h1>
+{% for msg in flashMessages %}
+    <div class="ui icon {{ msg.type }} message">
+        <i class="{{ msg.icon }} icon"></i>
+        <div class="content">
+            <div class="header">
+                {{ msg.title }}
+            </div>
+            <p>{{ msg.content }}</p>
+        </div>
+    </div>
+{% endfor %}

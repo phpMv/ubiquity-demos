@@ -9,16 +9,16 @@
 		"orm"
 	],
 	"require" : {
-		"php" : ">=8.0",
+		"php" : ">=7.4",
 		"phpmv/ubiquity": "dev-master",
 		"twig\/twig": "^3.0"
 	},
 	"license" : "Apache-2.0",
 	"authors" : [{
-		"name" : "Jean-Christophe HERON",
-		"email" : "myaddressmail@gmail.com",
-		"role" : "Lead developer"
-	}
+			"name" : "Jean-Christophe HERON",
+			"email" : "myaddressmail@gmail.com",
+			"role" : "Lead developer"
+		}
 	],
 	"autoload" : {
 		"psr-4" : {
@@ -38,8 +38,7 @@
 		"phpmv/ubiquity-dev": "^0.1",
 		"phpmv/ubiquity-commands": "^0.0",
 		"phpmv/ubiquity-debug": "^0.0",
-		"phpmv/ubiquity-attributes": "^0.0",
-		"monolog/monolog": "^2.5"
+		"phpmv/ubiquity-attributes": "^0.0.12"		
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,

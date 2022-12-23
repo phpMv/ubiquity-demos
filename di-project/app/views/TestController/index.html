@@ -1,0 +1,21 @@
+<div class="ui card">
+    <div class="content">
+        <div class="header">CounterService</div>
+        <div class="ui olive label">
+            Inc counter
+            <div class="detail">{{ counter.value }}</div>
+        </div>
+        <div class="ui orange label">
+            Dec counter
+            <div class="detail">{{ counterD.value }}</div>
+        </div>
+    </div>
+    <div class="extra content">
+        <a href="{{ path('test.inc') }}" class="ui icon button">
+            <i class="icon plus"></i>
+        </a>
+        <a href="{{ path('test.clear') }}" class="ui red icon button">
+            <i class="icon remove"></i>
+        </a>
+    </div>
+</div>

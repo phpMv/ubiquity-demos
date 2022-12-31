@@ -1,0 +1,10 @@
+
+<div class="ui buttons">
+    <a class="ui black button" href="Admin/Acls">AcLs in Webtools</a>
+    <a class="ui button" href="{{ path('user.read') }}">READ for @USER</a>
+    <a class="ui button" href="{{ path('user.write') }}">WRITE for @USER</a>
+    <a class="ui button" href="{{ path('all.read') }}">READ or @INVITED</a>
+    <a class="ui red button" href="{{ path('admin.all') }}">ALL for @ADMIN</a>
+    <a class="ui red button" href="{{ path('all.write') }}">WRITE for @ALL</a>
+</div>
+<div class="ui container" id="response"></div>

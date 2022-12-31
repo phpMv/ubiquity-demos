@@ -1,0 +1,53 @@
+{
+	"name" : "phpmv/ubiquity-project",
+	"description" : "Ubiquity-framework new project",
+	"type" : "framework",
+	"keywords" : [
+		"php",
+		"framework",
+		"mvc",
+		"orm"
+	],
+	"require" : {
+		"php" : ">=8.0",
+		"phpmv/ubiquity": "^2.3",
+		"twig\/twig": "^3.0",
+		"phpmv/ubiquity-acl": "dev-main"
+	},
+	"license" : "Apache-2.0",
+	"authors" : [{
+			"name" : "Jean-Christophe HERON",
+			"email" : "myaddressmail@gmail.com",
+			"role" : "Lead developer"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"": "app/"
+		}
+	},
+	"extra" : {
+		"branch-alias" : {
+			"dev-master" : "2.4.x-dev"
+		}
+	},
+	"require-dev" : {
+		"phpmv/ubiquity-devtools": "^1.3",
+		"phpmv/ubiquity-webtools": "dev-master",
+		"phpmv/ubiquity-codeception": "^1.0",
+		"phpmv/php-mv-ui": "^2.2",
+		"phpmv/ubiquity-dev": "^0.1",
+		"phpmv/ubiquity-commands": "^0.0",
+		"phpmv/ubiquity-debug": "^0.0",
+		"phpmv/ubiquity-attributes": "^0.0.12",
+		"monolog/monolog": "^3.2"		
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"scripts": {
+		"post-create-project-cmd": [
+			"@php vendor/phpmv/ubiquity-devtools/src/Ubiquity composer-create-project",
+			"@php vendor/phpmv/ubiquity-devtools/src/Ubiquity init-cache"
+		]
+	}
+}
